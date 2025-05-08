@@ -65,6 +65,7 @@ class RuntimeTaskInstanceProtocol(Protocol):
     hostname: str | None = None
     start_date: AwareDatetime
     end_date: AwareDatetime | None = None
+    log_url: str | None = None
 
     def xcom_pull(
         self,

@@ -137,6 +137,8 @@ class RuntimeTaskInstance(TaskInstance):
 
     rendered_map_index: str | None = None
 
+    log_url: str | None = None
+
     def __rich_repr__(self):
         yield "id", self.id
         yield "task_id", self.task_id
@@ -167,6 +169,7 @@ class RuntimeTaskInstance(TaskInstance):
             "run_id": self.run_id,
             "task": self.task,
             "task_instance": self,
+            "log_url": self.log_url,
             # TODO: Ensure that ti.log_url and such are available to use in context
             #   especially after removal of `conf` from Context.
             "ti": self,

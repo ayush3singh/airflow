@@ -813,6 +813,7 @@ class ActivitySubprocess(WatchedSubprocess):
             requests_fd=self._requests_fd,
             ti_context=ti_context,
             start_date=start_date,
+            log_url=ti.log_url,
         )
 
         # Send the message to tell the process what it needs to execute

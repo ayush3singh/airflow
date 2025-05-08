@@ -821,6 +821,7 @@ class TaskInstance(Base, LoggingMixin):
             hostname=self.hostname,
             _ti_context_from_server=context_from_server,
             start_date=self.start_date,
+            log_url=self.log_url,
         )
 
         return runtime_ti
